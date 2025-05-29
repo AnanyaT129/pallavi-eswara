@@ -1,46 +1,20 @@
-# Getting Started with Create React App
+# Editing the site through Github Online:
+- All content for the website is in the folder src/content, separated by tab
+- Each tab has its own file, for example, the home tab content is under "home.ts"
+- This is the only section of the code which needs to be edited to make content changes
+- Code changes should automatically re-deploy, and can be seen on the site after waiting a few minutes. If changes are not seen after 5 minutes, an error has occurred.
+- This method is only recommended for small or simple changes, such as making a typo correction, or changing outdated information, or removing or changing the orders of a section. For larger or complex edits, the edits must be done in a code editor to ensure that the syntax is correct and the website looks as expected. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to make changes
+1. Find the file that you want to edit through the navigator and click on it so that it appears in the center of the screen with its content displayed
+2. Start by clicking the pencil button above the code to open the editor
+3. Make changes according to the instructions below, depending on what you want to do
+4. ENSURE THAT SYNTAX IS CORRECT. Go through the syntax checklist to ensure there are no errors. A syntax error will mean that no changes are made as the website will not be able to deploy.
+5. Once you have made all the changes to a file, press the commit button. Write a message explaining what changes you have made and commit the chnages in github.
+6. After the commit, Render will deploy the changes if all is correct, automatically.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Syntax Checklist
+1. The content of each variable must be surrounded by brackets. Do not delete starting or ending brackets
+2. Any written content must be surrounded by quotations. The quotations must be of the same type, either "" or ''.
+3. All lines must end in a comma
+4. The information in a variable must match its type. This can be verified by looking at the files inside the types folder, inside the content folder. Search for the type of the constant you are entering, and ensure that every item in that type has been included in what you entered. 
