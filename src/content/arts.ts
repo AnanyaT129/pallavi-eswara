@@ -20,7 +20,10 @@ const Art = {
             title: "Fiber Art",
             buttonToPopoverTitle: "See More",
             subtitle: "",
-            body: []
+            body: [
+                "Working with yarn keeps me grounded. Using a single crochet hook, I have created some 2-D, functional objects that can be worn or used. Blankets, towels, napkins, pot holders, coasters, scarves, cowls, and shawls. As you can see, I stay away from anything three dimensional that involves reducing and increasing stitches.",
+                "Here are two recent examples to stay warm in New England weather- a scarf and a cowl. The cowl is not an a shortened scarf, but an accessory in its own right, if you ask me."
+            ]
         }
     ]
 }

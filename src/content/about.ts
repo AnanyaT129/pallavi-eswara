@@ -27,7 +27,24 @@ const leadership = {
         body: [
             {
                 heading: "Secretary, Executive Committee, Graduate Career Consortium",
-                paragraphs: []
+                paragraphs: [
+                    "I was elected to serve as the Secretary of the Graduate Career Consortium from 2021-2023. This role was significant in increasing membership, liaise with members and work with the executive committee to build the strategic plan for 2022-2026.",
+                ]
+            },
+            {
+                heading: "",
+                paragraphs: [
+                    "Inaugural co-chair, Professional Development Committee, Graduate Career Consortium",
+                    "In this role from 2019-2021, I led over 20 volunteers in defining the scope of the committee, creating goals, timelines, and groundwork for establishing the committee. Working with my colleagues, we created a competency framework for career and professional development staff serving graduate students and postdocs. The framework continues to be in use and has become the bedrock for new projects, such as creating an Individual Development Plan, and functions as a mentoring and self-analysis tool.",
+                    "I also initiated a new project that would map advertised positions at any level/rank in the field of graduate and postdoc professional and career development to core competency framework that was developed. The goal for the project was to make the process of applying, advancing in the field more transparent, data driven and informed.",
+                ]
+            },
+            {
+                heading: "",
+                paragraphs: [
+                    "Chair, Mid-Atlantic Regional Conference, Graduate Career Consortium",
+                    "In this role, I collaborated with colleagues to initiate the first online conference for the organization, and created an engaging and interactive conference with a timely program at a time of isolation and uncertainty in January 2021."
+                ]
             },
             {
                 heading: "Chair, Resource Development Committee",

@@ -8,22 +8,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
 import { Cards } from '../../content/types/layouts';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
-
-const Item = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.secondary.main,
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: (theme.vars ?? theme).palette.text.primary,
-    flexGrow: 1,
-}));
 
 export default function CardsLayout(props: Cards) {
     const [open, setOpen] = useState(false);
@@ -37,6 +27,17 @@ export default function CardsLayout(props: Cards) {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const minWidth = (90 / props.cards.length).toString + "%"
+
+    const Item = styled(Box)(({ theme }) => ({
+        backgroundColor: theme.palette.secondary.main,
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: (theme.vars ?? theme).palette.text.primary,
+        width: '100%'
+    }));
     
     return (
         <Box>
@@ -46,8 +47,8 @@ export default function CardsLayout(props: Cards) {
             <Stack
                 direction={{sm: "row", m: "column"}}
                 spacing={2}
-                useFlexGap
-                sx={{ flexWrap: 'wrap' }}
+                sx={{ alignItems: "stretch" }}
+                justifyContent="space-between"
             >
                 {props.cards.map((card, index) => (
                     <Item>

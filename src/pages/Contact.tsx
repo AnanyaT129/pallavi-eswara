@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Contact() {
     const formRef = useRef<HTMLFormElement | null>(null);
@@ -52,7 +53,7 @@ export default function Contact() {
     return (
         <div>
             <Header active={4}></Header>
-            <Container maxWidth="sm" sx={{marginTop: 3}}>
+            <Container maxWidth="sm" sx={{marginTop: 3, marginBottom: 6 }}>
                 <Typography variant="h4" gutterBottom>
                     Contact Me
                 </Typography>
@@ -102,6 +103,7 @@ export default function Contact() {
                     </Button>
                 </Box>
             </Container>
+            <Footer></Footer>
         </div>
   );
 };
