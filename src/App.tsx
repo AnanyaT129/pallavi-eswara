@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, HashRouter as Router, Routes } from 'react-router-dom';
 import About from './pages/About';
 import HigherEd from './pages/HigherEd';
 import ArtsCommunity from './pages/ArtsCommunity';
