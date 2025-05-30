@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 
 export default function TextWithTitleLayout(props: TextWithTitle) {
     return (<Container>
-        <Typography variant="h6">
+        <Typography variant="h5">
             {props.title}<br /><br />
         </Typography>
         {props.body.map((section, index) => (
