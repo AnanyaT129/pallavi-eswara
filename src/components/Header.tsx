@@ -1,64 +1,84 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Avatar } from '@mui/material';
+import React, { useState } from 'react';
+import {
+  AppBar, Toolbar, Typography, Button, Box, IconButton, Menu, MenuItem, useMediaQuery, useTheme
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
 
-function Header(props: {active?: number}) {
-    return (
-      <AppBar position="static" color="primary">
-          <Toolbar>
-              <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                  Pallavi Eswara
-              </Typography>
-              <Box>
-                  <Button 
-                        variant={props.active === 0 ? "contained" : "text"}
-                        color={props.active === 0 ? "secondary" : "inherit"}
-                        component={RouterLink}
-                        to="/"
-                        sx={{marginLeft: 3}}
-                  >
-                        Home
-                  </Button>
-                  <Button
-                        variant={props.active === 1 ? "contained" : "text"}
-                        color={props.active === 1 ? "secondary" : "inherit"}
-                        component={RouterLink}
-                        to="/about"
-                        sx={{marginLeft: 3}}
-                  >
-                        About
-                  </Button>
-                  <Button
-                        variant={props.active === 2 ? "contained" : "text"}
-                        color={props.active === 2 ? "secondary" : "inherit"}
-                        component={RouterLink}
-                        to="/highered"
-                        sx={{marginLeft: 3}}
-                  >
-                        Higher Ed
-                  </Button>
-                  <Button
-                        variant={props.active === 3 ? "contained" : "text"}
-                        color={props.active === 3 ? "secondary" : "inherit"}
-                        component={RouterLink}
-                        to="/arts-and-community"
-                        sx={{marginLeft: 3}}
-                  >
-                        Arts & Community
-                  </Button>
-                  <Button
-                        variant={props.active === 4 ? "contained" : "text"}
-                        color={props.active === 4 ? "secondary" : "inherit"}
-                        component={RouterLink}
-                        to="/contact"
-                        sx={{marginLeft: 3}}
-                  >
-                        Contact
-                  </Button>
-              </Box>
-          </Toolbar>
-      </AppBar>
-    );
+const navItems = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Higher Ed', path: '/highered' },
+  { label: 'Arts & Community', path: '/arts-and-community' },
+  { label: 'Contact', path: '/contact' },
+];
+
+function Header(props: { active?: number }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <AppBar position="static" color="primary">
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Pallavi Eswara
+        </Typography>
+
+        {isMobile ? (
+          <>
+            <IconButton
+              color="inherit"
+              onClick={handleMenuOpen}
+              edge="end"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+            >
+              {navItems.map((item, index) => (
+                <MenuItem
+                  key={item.label}
+                  component={RouterLink}
+                  to={item.path}
+                  onClick={handleMenuClose}
+                  selected={props.active === index}
+                >
+                  {item.label}
+                </MenuItem>
+              ))}
+            </Menu>
+          </>
+        ) : (
+          <Box>
+            {navItems.map((item, index) => (
+              <Button
+                key={item.label}
+                variant={props.active === index ? 'contained' : 'text'}
+                color={props.active === index ? 'secondary' : 'inherit'}
+                component={RouterLink}
+                to={item.path}
+                sx={{ marginLeft: 3 }}
+              >
+                {item.label}
+              </Button>
+            ))}
+          </Box>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
 }
 
 export default Header;

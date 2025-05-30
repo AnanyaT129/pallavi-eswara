@@ -8,20 +8,28 @@ import ArtsCommunity from './pages/ArtsCommunity';
 import Contact from './pages/Contact';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/highered" element={<HigherEd />} />
-          <Route path="/arts-and-community" element={<ArtsCommunity />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
+      <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh'
+        }}>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/highered" element={<HigherEd />} />
+                <Route path="/arts-and-community" element={<ArtsCommunity />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+            <Footer></Footer>
+        </Router>
+      </div>
     </ThemeProvider>
   );
 }

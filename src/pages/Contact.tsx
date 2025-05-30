@@ -9,7 +9,6 @@ import {
 } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 export default function Contact() {
     const formRef = useRef<HTMLFormElement | null>(null);
@@ -103,7 +102,6 @@ export default function Contact() {
                     </Button>
                 </Box>
             </Container>
-            <Footer></Footer>
         </div>
   );
 };

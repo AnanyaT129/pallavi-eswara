@@ -8,7 +8,6 @@ import TextWithPicLayout from '../components/layouts/TextWithPicLayout';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import { Cards, TextWithPic, TextWithTitle } from '../content/types/layouts';
-import Footer from '../components/Footer';
 
 export default function About() {
     const getContentFromSection = (section: AboutContentType) => {
@@ -34,6 +33,5 @@ export default function About() {
                 </div>
             ))}
         </Container>
-        <Footer></Footer>
     </div>
 }

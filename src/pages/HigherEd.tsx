@@ -6,7 +6,6 @@ import TextWithTitleLayout from '../components/layouts/TextWIthTitleLayout';
 import { AboutContentType, AboutLayouts } from '../content/types/aboutTypes';
 import { Cards, TextWithPic, TextWithTitle } from '../content/types/layouts';
 import Container from '@mui/material/Container';
-import Footer from '../components/Footer';
 import { higherEdContent } from '../content/higherEd';
 import Divider from '@mui/material/Divider';
 
@@ -34,6 +33,5 @@ export default function HigherEd() {
                 </div>
             ))}
         </Container>
-        <Footer></Footer>
     </div>
 }

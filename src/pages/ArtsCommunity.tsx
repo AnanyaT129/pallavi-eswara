@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import CardsLayout from '../components/layouts/CardsLayout';
 import TextWithPicLayout from '../components/layouts/TextWithPicLayout';
 import TextWithTitleLayout from '../components/layouts/TextWIthTitleLayout';
@@ -34,6 +33,5 @@ export default function ArtsCommunity() {
                 </div>
             ))}
         </Container>
-        <Footer></Footer>
     </div>
 }
